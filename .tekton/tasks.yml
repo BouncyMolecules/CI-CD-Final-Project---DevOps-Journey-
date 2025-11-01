@@ -32,7 +32,7 @@ spec:
           rm -rf "${WORKSPACE_SOURCE_PATH}"/..?*
         fi
 
- 
+---
 apiVersion: tekton.dev/v1beta1
 kind: Task
 metadata:
@@ -55,3 +55,4 @@ spec:
         python -m pip install --upgrade pip wheel
         pip install -r requirements.txt
         nosetests $(params.args)
+
